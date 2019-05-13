@@ -1,6 +1,6 @@
 //Dependencies
-const express = require('express');
-const exphbs = require("express-handlebars");
+var express = require('express');
+var exphbs = require("express-handlebars");
 var bodyParser = require("body-parser");
 
 //Create instance of express
