@@ -16,6 +16,12 @@ var burger = {
             cb(res);
         });
     }
+    // ,
+    // deleteOne: function (id, cb) {
+    //     orm.deleteOne([id], function (res){
+    //         cb(res);
+    //     });
+    // }
 };
 
 module.exports = burger;

@@ -31,18 +31,19 @@ var orm = {
             }
             cb(result);
         });
-    },
-     //delete a burger from the db.
-     deleteOne: function(id, cb) {
-        var queryString = "DELETE FROM burgers WHERE devoured = true AND WHERE id = ?";
-
-        connection.query(queryString, [id], function(err, result) {
-            if (err) {
-                throw err
-            }
-            cb(result);
-        });
     }
+    ,
+    // delete a burger from the db.
+    //  deleteOne: function(id, cb) {
+    //     var queryString = "DELETE FROM burgers WHERE id = ?";
+
+    //     connection.query(queryString, [id], function(err, result) {
+    //         if (err) {
+    //             throw err
+    //         }
+    //         cb(result);
+    //     });
+    // }
 };
 
 module.exports = orm;

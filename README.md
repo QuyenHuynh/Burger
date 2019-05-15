@@ -10,3 +10,9 @@ Deployed on Heroku:
 * Express.js
 * Express-Handlebars
 * MySQL
+
+## Future Improvements
+
+* Implement delete/clearing function
+* Text validation
+* Aesthetic changes

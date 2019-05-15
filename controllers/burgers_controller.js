@@ -4,11 +4,7 @@ var burger = require("../models/burger.js");
 
 router.get("/", function (req, res) {
     burger.selectAll(function (data) {
-        var hbsObject = {
-            burgers: data
-        };
-        console.log(hbsObject);
-        res.render("index", hbsObject);
+        res.render("index", {burgers: data});
     });
 });
 
@@ -18,12 +14,18 @@ router.post("/", function (req, res) {
     });
 });
 
-router.put("/:id", function (req, res) {
+router.put("/api/burgers/:id", function (req, res) {
     var id = req.params.id;
-    console.log("id", id);
     burger.updateOne(id, function () {
         res.redirect("/");
     });
 });
+
+// router.delete("/api/burgers/:id"), function (req, res){
+//     var id = req.params.id;
+//     burger.deleteOne(id, function(){
+//         res.redirect("/");
+//     })
+// };
 
 module.exports = router;
