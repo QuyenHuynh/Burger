@@ -19,7 +19,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 //Serves static content from our public folder
-app.use(express.static("public"));
+app.use(express.static(__dirname + '/public'));
 
 //Allows us to use _method in our index to send data to our api
 app.use(methodOverride("_method"));
